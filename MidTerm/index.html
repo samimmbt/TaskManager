@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" onload="console.log('onload1')">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Space+Grotesk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/UI.css">
+    <title>Task Manager</title>
+</head>
+
+<body onload="">
+    <script type="module">
+        import { closePopup } from './Scripts/Ui'
+        import { addtask } from './Scripts/DataHandler'
+        import { getMyDay } from './Scripts/TimeDate'
+        document.getElementById("close").addEventListener("click", () => {
+            closePopup(document.getElementById("popup"))
+        })
+        document.getElementById("save").addEventListener("click", () => {
+            addtask()
+        })
+    </script>
+    <div id="topContainer" class="top panel_bg1">
+        <div class="panel top left" id="topLeft">
+            <div id="flash"></div>
+            <div id="modeChanger" class="circle panel_bg1_darker">
+                <span class="modePart modePart1"></span>
+                <span class="modePart modePart2"></span>
+                <span class="modePart modePart3"></span>
+            </div>
+            <div id="theme"></div>
+        </div>
+        <div class="panel top right" id="topRight">
+            <div id="month">
+
+            </div>
+        </div>
+    </div>
+    <div id="bottomContainer" class="panel_bg1_lighter">
+        <div class="panel bottom left panel_bg1 shadow-bg1">
+            <!-- HTML !-->
+
+        </div>
+        <div class="panel bottom right">
+            <div id="timeContainer">
+                <div id="time" class="panel_bg1"></div>
+            </div>
+            <div id="jobsContainer">
+                <div style="margin-top: 2450px"></div>
+            </div>
+        </div>
+
+    </div>
+    <div id="popup">
+        <div id="close"></div>
+        <div id="title">
+            <h1>Add Task</h1>
+        </div>
+        <div id="content">
+            <div class="filed">
+                <div class="text">Title:</div>
+                <input type="text" name="" id="taskTitle" placeholder="Title">
+
+            </div>
+            <div class="filed">
+                <div class="text">Start Time:</div>
+                <input type="time" name="" id="taskStart">
+
+            </div>
+            <div class="filed">
+                <div class="text">End time:</div>
+                <input type="time" name="" id="taskEnd">
+            </div>
+            <div class="filed">
+                <div class="text">Comment:</div>
+                <input type="text" name="" id="taskComm" placeholder="comment">
+            </div>
+            <div class="filed">
+                <div class="text">Color:</div>
+                <input type="color" name="" id="taskColor">
+            </div>
+        </div>
+        <div id="buttons">
+            <div id="save">
+                <svg fill="currentColor" class="plus" viewBox="0 0 16 16">
+                    <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="Scripts/MainScript.js" defer></script>
+    <script type="module" src="Scripts/TimeDate.js"></script>
+    <script type="module" src="Scripts/MouseHandler.js"></script>
+    <script type="module" src="Scripts/Movment.js"></script>
+    <script type="module" src="Scripts/UI.js"></script>
+    <script type="module" src="Scripts/DataHandler.js"></script>
+    <script type="module" src="Scripts/FakeData.js"></script>
+</body>
+
+</html>

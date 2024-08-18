@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Space+Grotesk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/UI.css">
+    <title>Task</title>
+</head>
+
+<body>
+    <input type="text" id="day" style="display: none;">
+    <div id="popup" style="display: flex;">
+        <div id="title">
+            <h1>Task Detail</h1>
+        </div>
+        <div id="content">
+            <div class="filed">
+                <div class="text">Title:</div>
+                <input type="text" name="" id="taskTitle" placeholder="Title">
+
+            </div>
+            <div class="filed">
+                <div class="text">Date:</div>
+                <input type="date" name="" id="date">
+            </div>
+            <div class="filed">
+                <div class="text">Start Time:</div>
+                <input type="time" name="" id="taskStart">
+            </div>
+            <div class="filed">
+                <div class="text">End time:</div>
+                <input type="time" name="" id="taskEnd">
+            </div>
+            <div class="filed">
+                <div class="text">Comment:</div>
+                <input type="text" name="" id="taskComm" placeholder="comment">
+            </div>
+            <div class="filed">
+                <div class="text">Color:</div>
+                <input type="color" name="" id="taskColor">
+            </div>
+            <div class="filed">
+                <div class="text">completed:</div>
+                <select name="" id="completed">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+            </div>
+        </div>
+        <div id="buttons">
+            <div id="save" title="Edit">
+                <svg class="plus" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z">
+                    </path>
+                </svg>
+            </div>
+            <div id="del" title="Delete">
+                <svg class="plus" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z">
+                    </path>
+                </svg>
+            </div>
+            <div id="back" title="Back" onclick="window.location.href = '/'">
+                <svg class="plus" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z">
+                    </path>
+                    <path fill-rule="evenodd"
+                        d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="Scripts/MainScript.js" defer></script>
+    <script type="module" src="Scripts/TimeDate.js"></script>
+    <!-- <script type="module" src="Scripts/MouseHandler.js"></script> -->
+    <!-- <script type="module" src="Scripts/Movment.js"></script> -->
+    <script type="module" src="Scripts/UI.js"></script>
+    <script type="module" src="Scripts/DataHandler.js"></script>
+    <script type="module" src="Scripts/FakeData.js"></script>
+</body>
+
+</html>
